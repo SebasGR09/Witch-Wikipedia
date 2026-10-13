@@ -4,5 +4,6 @@ export type Mahou = {
     description: string,
     wish: string,
     img: string,
-    song: string
+    song: string | null,
+    color: string
 }

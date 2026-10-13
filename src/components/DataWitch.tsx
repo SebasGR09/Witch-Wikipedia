@@ -13,6 +13,8 @@ export default function DataWitch() {
 
     const dataMahouShoujo: Mahou = data.belongsTo;
 
+    const colorShadow: string = `0px 3px 20px 2px ${dataMahouShoujo.color}`
+
     function next() {
         indexDataWitch < witches.length - 1 ? indexDataWitchSet(indexDataWitch + 1) : indexDataWitchSet(0);
     }
@@ -29,7 +31,7 @@ export default function DataWitch() {
     return (
         <>
         <div className="flex items-start gap-6">
-            <div className="max-w-sm rounded overflow-hidden shadow-lg">
+            <div className="max-w-sm rounded overflow-hidden shadow-lg ml-3 mt-3 rounded-md"  style={{boxShadow: colorShadow}}>
                 <img className="w-full h-full object-contain" src={data.image} alt={data.name} />
                 <div className="px-6 py-4">
                   <div className="font-bold text-xl mb-2">{data.id} - {data.name}</div>
@@ -44,7 +46,7 @@ export default function DataWitch() {
                     <Buttons Fnext={next} Fback={back}/>
                     <span 
                         onClick={showCloseOwner}
-                        className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 ml-2 btn">{showModal ? "Cerrar" : "Ver propietaria"}</span>
+                        className={showModal ? "bg-white border-1 border-red-400 hover:bg-red-400 text-stone-800 font-bold py-2 px-4 rounded-l ml-2 rounded-r btn" : "border-1 border-green-400 hover:bg-green-400 text-stone-800 font-bold py-2 px-4 rounded-l ml-2 rounded-r btn"}>{showModal ? "Cerrar": "Ver propietaria"}</span>
                 </div>
                 
             </div>

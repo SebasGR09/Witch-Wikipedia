@@ -4,14 +4,14 @@ export default function Buttons({Fnext, Fback}:  {Fnext: ()=> void, Fback:()=> v
         <div className="inline-flex"> 
             <button 
                 onClick={Fback}
-                className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l btn"
+                className="bg-cyan-300 hover:bg-cyan-400 text-stone-800 font-bold py-2 px-4 rounded-l btn"
             >
                 Atras
             </button>
 
             <button 
                 onClick={Fnext} 
-                className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r btn"
+                className="bg-cyan-300 hover:bg-cyan-400 text-stone-800 font-bold py-2 px-4 rounded-r btn"
             >
                 Siguiente
             </button>
